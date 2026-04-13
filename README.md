@@ -1,2 +1,3 @@
-# Exerc-cios-Aulas-Algoritmo-e-Programa-o-para-Computa-o-Univasf
-Exercícios das aulas de Algoritmo e Programação para Computação da Univasf com o professor Marcelo Linder.
+# Exercícios de Algoritmos e Programação para Computação
+
+Não tem todos os exercícios que já fizemos em aula porque eu só fui ter a ideia de criar este repositório agora! hehehehehehehehehehehehhe
