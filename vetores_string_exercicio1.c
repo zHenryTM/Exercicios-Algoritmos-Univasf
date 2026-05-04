@@ -8,11 +8,15 @@ MAS ESTE CHAMOU A MINHA ATENÇÃO JUSTAMENTE POR USAR A FUNÇÃO sprint(), ALGO 
 
 #define qtd_elementos 10
 
-int main() {
-	char strings[qtd_elementos][20], strings_formatadas[qtd_elementos][21];
-	int numeros[qtd_elementos], i;
+int main()
+{
+	char strings				[qtd_elementos][20];
+	char strings_formatadas 	[qtd_elementos][21];
+	int numeros					[qtd_elementos];
+	int i;
 	
-	for (i = 0; i < qtd_elementos; i++) {
+	for (i = 0; i < qtd_elementos; i++)
+	{
 		printf("\nDigite um texto:\n");
 		scanf("%19s", &strings[i]);
 		
@@ -22,7 +26,8 @@ int main() {
 		sprintf(strings_formatadas[i], "%s%d", strings[i], numeros[i]);
 	}
 	
-	for (i = 0; i < qtd_elementos; i++) {
+	for (i = 0; i < qtd_elementos; i++) 
+	{
 		printf("\n\n%s\n", strings_formatadas[i]);
 	}
 }
