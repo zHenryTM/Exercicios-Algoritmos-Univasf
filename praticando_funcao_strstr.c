@@ -7,11 +7,11 @@ int main () {
 	scanf("%s", s1);
 	scanf("%s", s2);
 	
-	// Devolve endere�o de mem�ria da primeira ocorr�ncia de s2.
+	// Devolve endereço de memória da primeira ocorrência de s2.
 	p = strstr(s1, s2);
 	
 	if (p == NULL) printf("%d", 0);
-	else printf("%s", p);
+	else printf("%s", p - s1);  // p = endereço, s1 (isolado) = endereço. Por isso dá para fazer endereço - endereço.
 	
 	return 0;
 }
