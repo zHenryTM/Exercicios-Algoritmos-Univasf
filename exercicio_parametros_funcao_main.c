@@ -1,3 +1,8 @@
+/*
+	COMPILE O CÓDIGO COMO PREFERIR E O EXECUTE PELO CMD, ESCREVENDO O NOME DO ARQUIVO EXECUTÁVEL 
+	E, NA FRENTE, O VALOR DA VARIÁVEL, NO CASO DESTE EXERCÍCIO, UM NÚMERO INTEIRO.
+*/
+
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
@@ -11,4 +16,3 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
-
