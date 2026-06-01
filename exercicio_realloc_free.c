@@ -19,10 +19,8 @@ int main() {
 		}
 	}
 	
-	int i;
-	for (i = 0; i < qtd_numeros; i++) {
+	for (int i = 0; i < qtd_numeros; i++)
 		printf("%d ", *(numeros + i));
-	}
 	
 	free(numeros);
 	
