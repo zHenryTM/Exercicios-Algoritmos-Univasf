@@ -18,13 +18,13 @@ void ordenar(int v[], int tamanho) {
 	int apontador = 1;
 	while(apontador < tamanho) {
 		int varredor = 0;
-		for (; varredor < apontadorl; varredor++)
+		for (; varredor < apontador; varredor++)
 			if (v[varredor] > v[apontador]) {
 				int aux = v[varredor];
 				v[varredor] = v[apontador];
 				v[apontador] = aux;
 			}
-		indice_atual++;
+		apontador++;
 	}
 }
 
