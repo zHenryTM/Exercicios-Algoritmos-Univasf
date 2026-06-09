@@ -1,3 +1,5 @@
+// O ENUNCIADO DESTA QUESTÃO ENCONTRA-SE NO ARQUIVO D.pdf
+
 #include <stdio.h>
 
 int main() {
