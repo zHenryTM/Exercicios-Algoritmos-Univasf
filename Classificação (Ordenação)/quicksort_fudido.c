@@ -9,29 +9,15 @@ void quicksort(int vetor[], int inicio_vetor, int fim_vetor) {
     int j, k;  // Serão usadas dentro no for(). Contudo, ao final, j armazernará o índice do pivô dentro do vetor.
     		   // Por isso, é importante declarar essas variáveis fora do laço por questões de escopo
     
-    // Particionando o vetor usando a técnica "Algoritmo de Lamuto"
-    // Se quiser entender a lógica dessa técnica mais a fundo, acesse: https://www.youtube.com/shorts/MeBYqiehwyQ
-    for (j = inicio_vetor - 1, k = inicio_vetor; k <= fim_vetor; k++) {
-    	
-    	// Se o elemento atual do vetor for menor que o pivô, incrementa j e troca os valores de vetor[j] e vetor[k]
-    	// Essa troca faz parte do algoritmo de Lamuto
-        if (vetor[k] < pivo) {
-            int aux = vetor[k];
-            vetor[k] = vetor[++j];
+    for (j = inicio_vetor - 1, k = inicio_vetor; k <= fim_vetor; k++)  	// Particionando o vetor usando a técnica "Algoritmo de Lamuto". Se quiser entender a lógica, acesse: https://www.youtube.com/shorts/MeBYqiehwyQ
+        if (vetor[k] < pivo || k == fim_vetor) {  						// 1) Se o elemento atual do vetor for menor que o pivô, incrementa j e troca os valores de vetor[j] e vetor[k]; OU
+            int aux = vetor[k];											// 2) Se estiver iterando sobre o último valor do vetor, incrementa j e coloque o pivo, que nesse caso será v[k], na posição vetor[j]
+            vetor[k] = vetor[++j];	
             vetor[j] = aux;
         }
-        
-        // Se estiver iterando sobre o último valor do vetor, incrementa j e coloque o pivo na posição vetor[j]
-        if (k == fim_vetor) {
-            int aux = vetor[k];
-            vetor[k] = vetor[++j];
-            vetor[j] = aux;
-        }
-    }
     
-    // A esse ponto, j contém o valor do índice do pivo no vetor. Isso será útil para definir o último índice
-    // do vetor particionado à esquerda do pivo e para definir o primeiro índice do vetor particionado à direita do pivo
-    
+    // A esse ponto, j contém o valor do índice do pivo no vetor. Isso será útil para definir o último índice do vetor particionado à esquerda do pivo e para definir o primeiro índice do vetor particionado à direita do pivo
+	
     quicksort(vetor, inicio_vetor, j - 1);  // Vetor à esquerda do pivô
     
     quicksort(vetor, j + 1, fim_vetor);  // Vetor à direita do pivô
