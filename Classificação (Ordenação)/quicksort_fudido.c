@@ -6,8 +6,7 @@ void quicksort(int vetor[], int inicio_vetor, int fim_vetor) {
     
     int pivo = vetor[fim_vetor];
     
-    int j, k;  // Serão usadas dentro no for(). Contudo, ao final, j armazernará o índice do pivô dentro do vetor.
-    		   // Por isso, é importante declarar essas variáveis fora do laço por questões de escopo
+    int j, k;  // Serão usadas dentro no for(). Contudo, ao final, j armazernará o índice do pivô dentro do vetor. Por isso, é importante declarar essas variáveis fora do laço por questões de escopo
     
     for (j = inicio_vetor - 1, k = inicio_vetor; k <= fim_vetor; k++)  	// Particionando o vetor usando a técnica "Algoritmo de Lamuto". Se quiser entender a lógica, acesse: https://www.youtube.com/shorts/MeBYqiehwyQ
         if (vetor[k] < pivo || k == fim_vetor) {  						// 1) Se o elemento atual do vetor for menor que o pivô, incrementa j e troca os valores de vetor[j] e vetor[k]; OU
